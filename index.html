@@ -38,7 +38,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFYhxu3BK9jZkVAOd_z4oHf-NXJ-qTd9A&libraries=places&callback=initMap"></script>
   <script type="application/javascript">
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js'}).then(function() {
+    navigator.serviceWorker.register('/sw.js').then(function() {
       console.log('Service worker registration complete.');
     }, function(err) {
       console.log('Service worker registration failure: ', err);
