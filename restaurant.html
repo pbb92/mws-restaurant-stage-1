@@ -63,6 +63,18 @@
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <!-- Google Maps -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFYhxu3BK9jZkVAOd_z4oHf-NXJ-qTd9A&libraries=places&callback=initMap"></script>
+  <!-- Init Service Woeker -->
+    <script type="application/javascript">
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(function() {
+      console.log('Service worker registration complete.');
+    }, function(err) {
+      console.log('Service worker registration failure: ', err);
+    });
+  } else {
+    console.log('CLIENT: service worker is not supported.');
+  }
+  </script>
   <!-- End scripts -->
 
 </body>
