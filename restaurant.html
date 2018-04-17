@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Normalize.css for better cross-browser consistency -->
@@ -14,20 +14,22 @@
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
-    <nav>
+    <nav id="title">
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
+    <nav role="navigation">
     <ul id="breadcrumb" >
       <li><a href="/">Home</a></li>
     </ul>
+  </nav>
     <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent2">
+  <main id="maincontent2" role="main">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
@@ -35,7 +37,7 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h2 id="restaurant-name"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
@@ -64,7 +66,7 @@
   <!-- Google Maps -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFYhxu3BK9jZkVAOd_z4oHf-NXJ-qTd9A&libraries=places&callback=initMap"></script>
   <!-- Init Service Woeker -->
-    <script type="application/javascript">
+  <script type="application/javascript">
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function() {
       console.log('Service worker registration complete.');
